@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -7,8 +6,7 @@ public class CapstoneTaskListApp {
 	public static void main(String[] args) {
 		
 		Scanner keyboard = new Scanner(System.in);
-		
-		boolean taskCompleted = true;
+
 		boolean wantToContinue = true;
 		int i=0;
 		
@@ -91,10 +89,7 @@ public class CapstoneTaskListApp {
 				System.out.print("\nWhich task number would you like to mark as completed? ");
 				int completedTask = keyboard.nextInt();
 			  
-				taskList.set(1);
-				//taskList.set((completedTask-1), taskCompleted = true);
-				
-			  
+				taskList.get(completedTask-1).setTaskCompleted(true);
 			 break;
 		  case 5:
 			  wantToContinue = false;
@@ -104,17 +99,6 @@ public class CapstoneTaskListApp {
 		} 
 	}
 	System.out.println("Goodbye.");
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		keyboard.close();
